@@ -6,7 +6,6 @@ import {
 import { LangfuseExporter } from "langfuse-vercel";
  
 export function register() {
-  console.log("Registering Langfuse exporter for telemetry", process.env.LANGFUSE_PUBLIC_KEY);
   const exporter = new LangfuseExporter({
       publicKey: process.env.LANGFUSE_PUBLIC_KEY,
       secretKey: process.env.LANGFUSE_SECRET_KEY,

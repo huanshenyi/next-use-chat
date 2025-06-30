@@ -10,7 +10,8 @@ export const mastra = new Mastra({
   workflows: { weatherWorkflow },
   agents: { chatagent },
   storage: new LibSQLStore({
-    url: ":memory:",
+    url: process.env.memoryStorageUrl || ":memory:",
+    authToken: process.env.memoryToken
   }),
   logger: new PinoLogger({
     name: 'Mastra',
