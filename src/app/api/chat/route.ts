@@ -18,7 +18,7 @@ export async function POST(request: Request) {
   const stream = await agent.stream(message.content, {
     threadId,
     resourceId,
-        memoryOptions: {
+    memoryOptions: {
       lastMessages: 10,
       semanticRecall: {
         topK: 3,

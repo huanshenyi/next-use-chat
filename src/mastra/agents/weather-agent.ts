@@ -11,7 +11,8 @@ export const chatagent = new Agent({
   tools: { weatherTool },
   memory: new Memory({
     storage: new LibSQLStore({
-      url: "file:../mastra.db", // Or your database URL
+    url: process.env.memoryStorageUrl || "file:../mastra.db",
+    authToken: process.env.memoryToken
     }),
   })
 });
