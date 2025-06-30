@@ -20,7 +20,7 @@ export const mastra = new Mastra({
   telemetry: {
     serviceName: "ai",
     enabled: true,
-        export: {
+      export: {
       type: "custom",
       exporter: new LangfuseExporter({
         publicKey: process.env.LANGFUSE_PUBLIC_KEY,

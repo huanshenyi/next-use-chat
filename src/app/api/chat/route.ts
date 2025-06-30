@@ -5,7 +5,7 @@ export async function POST(request: Request) {
   // Get data structured by experimental_prepareRequestBody
   const { message, threadId, resourceId }: { message: CoreMessage | null; threadId: string; resourceId: string } = await request.json();
 
-  console.log("Received message:", message, threadId, resourceId);
+  // console.log("Received message:", message, threadId, resourceId);
  
   // Handle cases where message might be null (e.g., initial load or error)
   if (!message || !message.content || typeof message.content !== 'string') {
